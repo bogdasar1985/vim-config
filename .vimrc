@@ -1,0 +1,1 @@
+/home/bogdasar/.vimrc
