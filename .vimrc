@@ -24,6 +24,8 @@ Plug 'xavierd/clang_complete'
 "https://github.com/tpope/vim-fugitive
 Plug 'tpope/vim-fugitive'
 
+"https://github.com/mattn/emmet-vim
+Plug 'mattn/emmet-vim'
 call plug#end()
 
 "For instant-markdown
