@@ -26,6 +26,14 @@ Plug 'tpope/vim-fugitive'
 
 "https://github.com/mattn/emmet-vim
 Plug 'mattn/emmet-vim'
+
+"https://github.com/prabirshrestha/vim-lsp
+"https://github.com/mattn/vim-lsp-settings
+Plug 'prabirshrestha/vim-lsp'
+Plug 'mattn/vim-lsp-settings'
+Plug 'prabirshrestha/asyncomplete.vim'
+Plug 'prabirshrestha/asyncomplete-lsp.vim'
+
 call plug#end()
 
 "For instant-markdown
@@ -44,10 +52,19 @@ set listchars=tab:>-,trail:·
 hi SpecialKey ctermfg=240
 "guifg=#B3B3B3
 
-
 "For clang-complete
 let g:clang_library_path='/usr/lib/llvm-10/lib'
 set completeopt-=preview
 
 "For latex preview
 au FileType tex nnoremap<buffer><C-c> :!pdflatex %<CR>
+
+"For emmet
+let g:user_emmet_install_global = 0
+autocmd FileType html,css EmmetInstall
+
+"For vim-lsp
+inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+inoremap <expr> <cr>    pumvisible() ? asyncomplete#close_popup() : "\<cr>"
+imap <c-space> <Plug>(asyncomplete_force_refresh)
