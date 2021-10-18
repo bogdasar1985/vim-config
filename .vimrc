@@ -16,7 +16,7 @@ Plug 'lervag/vimtex'
 Plug 'scrooloose/nerdtree'
 
 "https://github.com/instant-markdown/vim-instant-markdown
-Plug 'instant-markdown/vim-instant-markdown'
+"Plug 'instant-markdown/vim-instant-markdown'
 
 "https://github.com/xavierd/clang_complete
 Plug 'xavierd/clang_complete'
@@ -33,6 +33,11 @@ Plug 'prabirshrestha/vim-lsp'
 Plug 'mattn/vim-lsp-settings'
 Plug 'prabirshrestha/asyncomplete.vim'
 Plug 'prabirshrestha/asyncomplete-lsp.vim'
+
+"https://github.com/othree/eregex.vim
+"https://github.com/dkprice/vim-easygrep
+Plug 'othree/eregex.vim'
+Plug 'dkprice/vim-easygrep'
 
 call plug#end()
 
@@ -68,3 +73,7 @@ inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 inoremap <expr> <cr>    pumvisible() ? asyncomplete#close_popup() : "\<cr>"
 imap <c-space> <Plug>(asyncomplete_force_refresh)
+map g<C-]> :LspDeclaration<CR>
+map <C-]> :LspDefinition<CR>
+
+"For easygrep
