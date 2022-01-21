@@ -39,6 +39,8 @@ Plug 'prabirshrestha/asyncomplete-lsp.vim'
 Plug 'othree/eregex.vim'
 Plug 'dkprice/vim-easygrep'
 
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
 call plug#end()
 
 "For instant-markdown
@@ -73,7 +75,7 @@ inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 inoremap <expr> <cr>    pumvisible() ? asyncomplete#close_popup() : "\<cr>"
 imap <c-space> <Plug>(asyncomplete_force_refresh)
-map g<C-]> :LspDeclaration<CR>
-map <C-]> :LspDefinition<CR>
-
+noremap c<C-]> :LspDeclaration<CR>
+noremap f<C-]> :LspDefinition<CR>
+noremap r<C-]> :LspReferences<CR>
 "For easygrep
