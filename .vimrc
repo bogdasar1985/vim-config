@@ -78,4 +78,8 @@ imap <c-space> <Plug>(asyncomplete_force_refresh)
 noremap c<C-]> :LspDeclaration<CR>
 noremap f<C-]> :LspDefinition<CR>
 noremap r<C-]> :LspReferences<CR>
-"For easygrep
+
+"For Telescope
+nnoremap <leader>ff <cmd>Telescope find_files<cr>
+nnoremap <leader>fg <cmd>Telescope live_grep<cr>
+nnoremap <leader>fb <cmd>Telescope buffers<cr>
