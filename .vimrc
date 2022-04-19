@@ -41,6 +41,9 @@ Plug 'dkprice/vim-easygrep'
 
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
+
+Plug 'MattesGroeger/vim-bookmarks'
+
 call plug#end()
 
 "For instant-markdown
@@ -83,3 +86,10 @@ noremap r<C-]> :LspReferences<CR>
 nnoremap <leader>ff <cmd>Telescope find_files<cr>
 nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 nnoremap <leader>fb <cmd>Telescope buffers<cr>
+
+"For tabs
+noremap Tn <cmd>tabnew<cr>
+noremap Tc <cmd>tabclose<cr>
+noremap tn <cmd>tabnext<cr>
+noremap tp <cmd>tabprevious<cr>
+
