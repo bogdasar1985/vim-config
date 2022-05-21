@@ -6,7 +6,6 @@ set relativenumber
 syntax on
 nnoremap <F7> :tabp <Enter>
 nnoremap <F8> :tabn <Enter>
-
 call plug#begin('~/.vim/plugged')
 
 "https://github.com/lervag/vimtex
@@ -44,6 +43,11 @@ Plug 'nvim-telescope/telescope.nvim'
 
 Plug 'MattesGroeger/vim-bookmarks'
 
+"For Rust
+Plug 'neovim/nvim-lspconfig'
+Plug 'simrat39/rust-tools.nvim'
+
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 call plug#end()
 
 "For instant-markdown
@@ -93,3 +97,5 @@ noremap Tc <cmd>tabclose<cr>
 noremap tn <cmd>tabnext<cr>
 noremap tp <cmd>tabprevious<cr>
 
+"For fzf
+set rtp+=/usr/bin/fzf
